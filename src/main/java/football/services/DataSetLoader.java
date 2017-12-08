@@ -18,7 +18,7 @@ public class DataSetLoader {
     private SQLContext sqlContext;
 
     public Dataset<Row> load() {
-        JavaRDD<String> rdd = sc.textFile("data/rawData.txt");
+        JavaRDD<String> rdd = sc.textFile("data/footballData.txt");
         JavaRDD<GameItem> rowJavaRDD = rdd.map(line -> {
             String[] data = line.split(";");
             return new FootballGameItem(data);
