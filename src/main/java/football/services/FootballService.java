@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class FootballService implements GameService {
 
     @Autowired
-    DataSetLoader dataSetLoader;
+    FootballDataSetLoader dataSetLoader;
 
     @Override
     public void doWork() {

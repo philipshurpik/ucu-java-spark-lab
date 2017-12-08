@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DataSetLoader {
+public class FootballDataSetLoader {
     @Autowired
     private JavaSparkContext sc;
 
