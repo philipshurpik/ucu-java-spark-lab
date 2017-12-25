@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FootballItemBuilder implements GameItemBuilder, Serializable {
     private SimpleDateFormat formatEvent = new SimpleDateFormat("mm:ss");
-    private SimpleDateFormat formatStart = new SimpleDateFormat("hh:mm");
+    private SimpleDateFormat formatStart = new SimpleDateFormat("H:mm");
 
     @Override
     public GameItem build(Map<String, String> line) {
@@ -32,6 +32,7 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
         }
 
         try {
+            formatStart.setLenient(false);
             eventTime = formatEvent.parse(line.getOrDefault("eventTime", ""));
             startTime = formatStart.parse(line.getOrDefault("startTime", ""));
         }

@@ -24,5 +24,5 @@ code=4;from=Bastian Schweinsteiger;to=Julian Draxler;eventTime=44:49;stadium=sil
 code=4;from=Oleksandr Karavayev;to=Serhiy Rybalka;eventTime=12:12;stadium=they;startTime=15:39;
 code=3;from=Dmytro Rudnytskykh;to=Roman Shirokov;eventTime=74:49;stadium=sill;startTime=3:31;
 code=2;to=Julian Draxler;;eventTime=2:12;stadium=they;startTime=15:30;
-code=3;from=Oleksandr Karavayev;to=Joshua Kimmich;eventTime=34:49;stadium=sill;startTime=3:31;
-code=2;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTime=45:39;
+code=3;from=Oleksandr Karavayev;to=Joshua Kimmich;eventTime=124:49;stadium=sill;startTime=3:31;
+code=2;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTime=16:00;
