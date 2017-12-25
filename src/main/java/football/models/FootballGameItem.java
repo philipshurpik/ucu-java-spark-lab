@@ -1,17 +1,17 @@
 package football.models;
 
+import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class FootballGameItem implements GameItem {
+@Builder
+public class FootballGameItem implements GameItem, Serializable {
     private int code;
     private String from;
     private String to;
     private String stadium;
     private String eventTime;
     private String startTime;
-
-    public FootballGameItem(String[] data) {
-        System.out.println("initialized," + data[0]);
-    }
 }
