@@ -42,9 +42,9 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
 
         return FootballGameItem.builder()
                 .code(code)
-                .from(line.get("from"))
-                .to(line.get("to"))
-                .stadium(line.get("stadium"))
+                .from(line.getOrDefault("from", ""))
+                .to(line.getOrDefault("to", ""))
+                .stadium(line.getOrDefault("stadium", ""))
                 .eventTime(eventTime)
                 .startTime(startTime)
                 .build();
