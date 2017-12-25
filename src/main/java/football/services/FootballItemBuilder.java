@@ -50,5 +50,3 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
                 .build();
     }
 }
-
-//columnNames = code,from,to,eventTime,stadium,startTime

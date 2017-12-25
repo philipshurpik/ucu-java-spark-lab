@@ -14,10 +14,13 @@ public class GameLoaderImpl implements GameLoader {
     private JavaSparkContext sc;
 
     @Autowired
+    private GameLineParser gameLineParser;
+
+    @Autowired
     private GameItemBuilder gameItemBuilder;
 
     @Autowired
-    private GameLineParser gameLineParser;
+    private GameItemValidator gameItemValidator;
 
     @Override
     public JavaRDD<GameItem> load() {
@@ -26,6 +29,7 @@ public class GameLoaderImpl implements GameLoader {
                 .filter(line -> line.trim().length() > 0)
                 .map(gameLineParser::parse)
                 .map(gameItemBuilder::build)
-                .filter(Objects::nonNull);
+                .filter(Objects::nonNull)
+                .filter(gameItemValidator::validate);
     }
 }
