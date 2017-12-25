@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("football")
-@PropertySource("classpath:teams.properties")
+@PropertySource("classpath:football_columns.properties")
 public class Conf {
 
     @Autowired

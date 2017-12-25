@@ -11,7 +11,7 @@ import java.util.Map;
 public class FootballItemBuilder implements GameItemBuilder, Serializable {
     @Override
     public GameItem build(Map<String, String> line) {
-        System.out.println("line build");
+        System.out.println("line build" + line.get("code"));
         return FootballGameItem.builder().code(1).build();
     }
 }
