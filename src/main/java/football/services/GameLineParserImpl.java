@@ -21,9 +21,9 @@ public class GameLineParserImpl implements GameLineParser, Serializable {
         String[] data = rawLine.split(";");
         for (String item : data) {
             if (item.contains("=")) {
-                String[] columns = data[0].split("=");
-                if (this.columnsConfig.value().columns.contains(columns[0])) {
-                    line.put(columns[0], columns[1]);
+                String[] keyValue = item.split("=");
+                if (this.columnsConfig.value().columns.contains(keyValue[0])) {
+                    line.put(keyValue[0], keyValue[1]);
                 }
             }
         }
