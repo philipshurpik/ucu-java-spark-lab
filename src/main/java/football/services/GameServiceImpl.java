@@ -5,8 +5,6 @@ import org.apache.spark.api.java.JavaRDD;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import static org.apache.spark.storage.StorageLevel.MEMORY_AND_DISK;
-
 @Service
 public class GameServiceImpl implements GameService {
 
@@ -14,7 +12,7 @@ public class GameServiceImpl implements GameService {
     GameLoader gameLoader;
 
     @Override
-    public void doWork() {
+    public void process() {
         //Dataset<Row> dataFrame = gameLoader.load();
         JavaRDD<GameItem> rdd = gameLoader.load();
         System.out.println("numberOfLines = " + rdd.count());

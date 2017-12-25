@@ -12,7 +12,7 @@ public class ColumnsConfig implements Serializable {
     public List<String> columns;
 
     @Value("${columnNames}")
-    private void setGarbage(String[] columns) {
+    private void setColumns(String[] columns) {
         this.columns = Arrays.asList(columns);
     }
 }

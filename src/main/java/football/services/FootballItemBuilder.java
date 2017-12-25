@@ -9,7 +9,6 @@ import java.util.Map;
 
 @Service
 public class FootballItemBuilder implements GameItemBuilder, Serializable {
-
     @Override
     public GameItem build(Map<String, String> line) {
         System.out.println("line build");

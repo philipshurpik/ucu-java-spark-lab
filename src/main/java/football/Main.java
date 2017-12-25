@@ -11,6 +11,6 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Conf.class);
 
         GameService gameService = context.getBean(GameService.class);
-        gameService.doWork();
+        gameService.process();
     }
 }
