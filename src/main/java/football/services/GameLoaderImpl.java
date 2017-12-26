@@ -21,7 +21,7 @@ public class GameLoaderImpl implements GameLoader {
 
     @Override
     public JavaRDD<GameItem> load() {
-        JavaRDD<String> rdd = sc.textFile("data/footballData.txt");
+        JavaRDD<String> rdd = sc.textFile(sc.getConf().get("dataPath"));
         return rdd
                 .filter(line -> line.trim().length() > 0)
                 .map(gameLineParser::parse)

@@ -14,6 +14,8 @@ public class ProdConfig {
     public SparkConf sparkConf(){
         SparkConf sparkConf = new SparkConf();
         sparkConf.setAppName("football");
+        // here set some production path for data, for example from s3
+        sparkConf.set("dataPath", "s3://s3.eu-central-1.amazonaws.com/haircolorbot/ucu/footballData.txt");
         return sparkConf;
     }
 }

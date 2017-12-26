@@ -15,6 +15,7 @@ public class DevConfig {
         SparkConf sparkConf = new SparkConf();
         sparkConf.setAppName("football-dev");
         sparkConf.setMaster("local[*]");
+        sparkConf.set("dataPath", "data/footballData.txt");
         return sparkConf;
     }
 }
