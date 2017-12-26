@@ -13,7 +13,6 @@ public class TeamsConfig implements Serializable {
     private static final String PROPERTY_SOURCE = "teams.properties";
 
     public Map<String, List<String>> teams = new HashMap<>();
-    public List<String> allPlayers = new ArrayList<>();
 
     @PostConstruct
     public void init() throws IOException {
@@ -21,7 +20,6 @@ public class TeamsConfig implements Serializable {
         properties.forEach((key,value) -> {
             String[] members = ((String)value).split(",");
             teams.put((String) key, Arrays.asList(members));
-            allPlayers.addAll(Arrays.asList(members));
         });
     }
 }
