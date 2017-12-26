@@ -1,6 +1,7 @@
 package football.services;
 
 import football.enrichers.CodeEnricher;
+import football.enrichers.PeriodEnricher;
 import football.enrichers.TeamEnricher;
 import football.models.FootballGameItem;
 import football.models.GameItem;
@@ -24,8 +25,8 @@ public class FootballEnricher implements GameEnricher {
         Dataset<Row> dataFrame = sqlContext.createDataFrame(rdd, FootballGameItem.class);
 
         dataFrame = dataFrame.withColumn("team name", callUDF(TeamEnricher.class.getName(), col("from"), col("to")))
-                .withColumn("operation", callUDF(CodeEnricher.class.getName(), col("code")));
-
+                .withColumn("operation", callUDF(CodeEnricher.class.getName(), col("code")))
+                .withColumn("period", callUDF(PeriodEnricher.class.getName(), col("eventTime")));
 
         return dataFrame;
     }

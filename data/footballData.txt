@@ -21,7 +21,7 @@ code=2;from=Ivan Ivanov;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTim
 code=7;from=Artur Yusupov;eventTime=44:49;stadium=sill;startTime=3:31;
 code=2;from=Lukas Podolski;to=Sami KhediraApri;eventTime=12:12;stadium=they;startTime=12:39;
 code=4;from=Bastian Schweinsteiger;to=Julian Draxler;eventTime=44:49;stadium=sill;startTime=21:51;
-code=4;from=Oleksandr Karavayev;to=Serhiy Rybalka;eventTime=12:12;stadium=they;startTime=15:39;
+code=4;from=Oleksandr Karavayev;to=Serhiy Rybalka;eventTime=45:12;stadium=they;startTime=15:39;
 code=3;from=Dmytro Rudnytskykh;to=Roman Shirokov;eventTime=74:49;stadium=sill;startTime=3:31;
 code=2;to=Julian Draxler;;eventTime=2:12;stadium=they;startTime=15:30;
 code=7;from=Oleksandr Karavayev;eventTime=24:01;stadium=sill;startTime=3:31;
