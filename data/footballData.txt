@@ -8,7 +8,7 @@ from=Artyom Dzyuba;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTime=21:
 code=2;from=Artyom Dzyuba;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTime=55:39;
 code=2;eventTime=2:12;stadium=they;startTime=55:39;
 code=6;from=Emre Can;to=Igor Akinfeev;eventTime=200:42;stadium=shepherd;startTime=5:20;
-code=2;from=Denys Harmash;to=Yevhen Seleznyo;eventTime=13:3;stadium=trying;startTime=12:37;
+code=2;from=Denys Harmash;eventTime=13:3;stadium=trying;startTime=12:37;
 code=8;from=Denys Harmash;to=Roman Shirokov;eventTime=76:49;stadium=sill;startTime=2:31;
 code=3;from=Denys Harmash;to=Roman Shirokov;eventTime=44:49;stadium=sill;startTime=3:31;
 code=3;from=Dmytro Rudnytskykh;to=Roman Shirokov;eventTime=44:49;stadium=sill;startTime=3:31;
@@ -24,5 +24,5 @@ code=4;from=Bastian Schweinsteiger;to=Julian Draxler;eventTime=44:49;stadium=sil
 code=4;from=Oleksandr Karavayev;to=Serhiy Rybalka;eventTime=12:12;stadium=they;startTime=15:39;
 code=3;from=Dmytro Rudnytskykh;to=Roman Shirokov;eventTime=74:49;stadium=sill;startTime=3:31;
 code=2;to=Julian Draxler;;eventTime=2:12;stadium=they;startTime=15:30;
-code=3;from=Oleksandr Karavayev;to=Joshua Kimmich;eventTime=124:49;stadium=sill;startTime=3:31;
+code=7;from=Oleksandr Karavayev;eventTime=24:01;stadium=sill;startTime=3:31;
 code=2;to=Sami KhediraApri;eventTime=2:12;stadium=they;startTime=16:00;

@@ -28,7 +28,7 @@ public class FootballTeamValidator implements GameFieldValidator, Serializable {
         String fromTeam = this.teamsConfig.value().players.getOrDefault(fromPlayer, "");
         String toTeam = this.teamsConfig.value().players.getOrDefault(toPlayer, "");
 
-        if (!fromTeam.equals(toTeam)) {
+        if (!fromPlayer.equals("") && !toTeam.equals("") && !fromTeam.equals(toTeam)) {
             log.warn("Game item" + gameItem + "do not passed same team validation");
             return false;
         }
