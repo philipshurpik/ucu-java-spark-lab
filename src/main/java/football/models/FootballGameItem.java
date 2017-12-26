@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Timestamp;
 
 
 @Data
@@ -14,6 +14,6 @@ public class FootballGameItem implements GameItem, Serializable {
     private String from;
     private String to;
     private String stadium;
-    private Date eventTime;
-    private Date startTime;
+    private Timestamp eventTime;
+    private Timestamp startTime;
 }

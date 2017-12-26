@@ -5,6 +5,7 @@ import football.models.GameItem;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -46,8 +47,8 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
                 .from(line.getOrDefault("from", ""))
                 .to(line.getOrDefault("to", ""))
                 .stadium(line.getOrDefault("stadium", ""))
-                .eventTime(eventTime)
-                .startTime(startTime)
+                .eventTime(new Timestamp(eventTime.getTime()))
+                .startTime(new Timestamp(startTime.getTime()))
                 .build();
     }
 }
