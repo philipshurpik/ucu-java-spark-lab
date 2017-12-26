@@ -21,7 +21,7 @@ public class FootballEventTimeValidator implements GameFieldValidator, Serializa
         if (eventTime.getHours() * 60 + eventTime.getMinutes() < GAME_TIME) {
             return true;
         }
-        log.warn("Game item" + gameItem + "do not passed event time validation, event time:", footballGameItem.getEventTime());
+        log.warn("Do not passed event time validation, event time: " + footballGameItem.getEventTime());
         return false;
     }
 }

@@ -27,15 +27,15 @@ public class FootballTeamValidator implements GameFieldValidator, Serializable {
         String toTeam = this.teamsConfig.value().players.getOrDefault(toPlayer, "");
 
         if (!fromPlayer.equals("") && !toTeam.equals("") && !fromTeam.equals(toTeam)) {
-            log.warn("Game item" + gameItem + "do not passed same team validation");
+            log.warn("Do not passed same team validation\n" + gameItem);
             return false;
         }
         if (!fromPlayer.equals("") && fromTeam.equals("")) {
-            log.warn("Game item" + gameItem + "do not passed player existence validation, player:", fromPlayer);
+            log.warn("Do not passed player existence validation, player: " + fromPlayer);
             return false;
         }
         if (!toPlayer.equals("") && toTeam.equals("")) {
-            log.warn("Game item" + gameItem + "do not passed player existence validation, player:", toPlayer);
+            log.warn("Do not passed player existence validation, player: " + toPlayer);
             return false;
         }
         return true;

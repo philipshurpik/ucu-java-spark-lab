@@ -28,7 +28,7 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
             code = Integer.parseInt(line.getOrDefault("code", ""));
         }
         catch (NumberFormatException exc) {
-            log.warn("Invalid code in game item line: " + line + "\n" + exc.getMessage());
+            log.warn("Invalid code in game item line: \n" + line + "+" + exc.getMessage());
             return null;
         }
 
@@ -38,7 +38,7 @@ public class FootballItemBuilder implements GameItemBuilder, Serializable {
             startTime = formatStart.parse(line.getOrDefault("startTime", ""));
         }
         catch (ParseException exc) {
-            log.warn("Invalid date in game item line: " + line + "\n" + exc.getMessage());
+            log.warn("Invalid date in game item line: \n" + line + ": " + exc.getMessage());
             return null;
         }
 

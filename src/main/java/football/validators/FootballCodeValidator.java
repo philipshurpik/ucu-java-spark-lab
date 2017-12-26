@@ -37,7 +37,7 @@ public class FootballCodeValidator implements GameFieldValidator, Serializable {
             }
         }
         if (!isValid) {
-            log.warn("Game item" + gameItem + "do not passed code validation, code:", footballGameItem.getCode());
+            log.warn("Do not passed code validation for code: " + code.toString());
         }
         return isValid;
     }
