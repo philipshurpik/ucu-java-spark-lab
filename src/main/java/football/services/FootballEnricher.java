@@ -1,5 +1,6 @@
 package football.services;
 
+import football.aspects.ShowDataFrameAtTheEnd;
 import football.enrichers.CodeEnricher;
 import football.enrichers.PeriodEnricher;
 import football.enrichers.TeamEnricher;
@@ -21,6 +22,7 @@ public class FootballEnricher implements GameEnricher {
     private SQLContext sqlContext;
 
     @Override
+    @ShowDataFrameAtTheEnd()
     public Dataset<Row> enrich(JavaRDD<GameItem> rdd) {
         Dataset<Row> dataFrame = sqlContext.createDataFrame(rdd, FootballGameItem.class);
 
