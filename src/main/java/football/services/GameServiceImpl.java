@@ -2,6 +2,7 @@ package football.services;
 
 import football.models.GameItem;
 import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.storage.StorageLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,15 +10,19 @@ import org.springframework.stereotype.Service;
 public class GameServiceImpl implements GameService {
 
     @Autowired
-    GameLoader gameLoader;
+    private GameLoader gameLoader;
+
+    @Autowired
+    private GameValidator gameValidator;
 
     @Override
     public void process() {
-        //Dataset<Row> dataFrame = gameLoader.load();
         JavaRDD<GameItem> rdd = gameLoader.load();
-        System.out.println("numberOfLines = " + rdd.count());
+        rdd.persist(StorageLevel.MEMORY_AND_DISK());
+        System.out.println("number of lines before validation = " + rdd.count());
+        rdd = gameValidator.validate(rdd);
+        System.out.println("number of lines after validation = " + rdd.count());
 
-        System.out.println("GameItem loader finished");
         //dataFrame.show();
         //System.out.println("DatasetLoader finished");
     }

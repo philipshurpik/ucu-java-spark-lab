@@ -19,9 +19,6 @@ public class GameLoaderImpl implements GameLoader {
     @Autowired
     private GameItemBuilder gameItemBuilder;
 
-    @Autowired
-    private GameItemValidator gameItemValidator;
-
     @Override
     public JavaRDD<GameItem> load() {
         JavaRDD<String> rdd = sc.textFile("data/footballData.txt");
@@ -29,7 +26,6 @@ public class GameLoaderImpl implements GameLoader {
                 .filter(line -> line.trim().length() > 0)
                 .map(gameLineParser::parse)
                 .map(gameItemBuilder::build)
-                .filter(Objects::nonNull)
-                .filter(gameItemValidator::validate);
+                .filter(Objects::nonNull);
     }
 }
