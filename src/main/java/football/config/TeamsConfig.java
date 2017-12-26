@@ -12,14 +12,18 @@ import java.util.*;
 public class TeamsConfig implements Serializable {
     private static final String PROPERTY_SOURCE = "teams.properties";
 
-    public Map<String, List<String>> teams = new HashMap<>();
+    public Map<String, String> players = new HashMap<>();
 
     @PostConstruct
     public void init() throws IOException {
         Properties properties = PropertiesLoaderUtils.loadAllProperties(PROPERTY_SOURCE);
-        properties.forEach((key,value) -> {
-            String[] members = ((String)value).split(",");
-            teams.put((String) key, Arrays.asList(members));
+        properties.forEach((key, value) -> {
+            String[] members = ((String) value).split(",");
+            Arrays.asList(members).forEach(player -> {
+                if (player.trim().length() > 0) {
+                    players.put(player, (String) key);
+                }
+            });
         });
     }
 }

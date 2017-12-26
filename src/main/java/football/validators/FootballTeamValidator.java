@@ -25,8 +25,8 @@ public class FootballTeamValidator implements GameFieldValidator, Serializable {
         String fromPlayer = footballGameItem.getFrom();
         String toPlayer = footballGameItem.getTo();
 
-        String fromTeam = this.getPlayerTeam(fromPlayer);
-        String toTeam = this.getPlayerTeam(toPlayer);
+        String fromTeam = this.teamsConfig.value().players.getOrDefault(fromPlayer, "");
+        String toTeam = this.teamsConfig.value().players.getOrDefault(toPlayer, "");
 
         if (!fromTeam.equals(toTeam)) {
             log.warn("Game item" + gameItem + "do not passed same team validation");
@@ -41,18 +41,5 @@ public class FootballTeamValidator implements GameFieldValidator, Serializable {
             return false;
         }
         return true;
-    }
-
-    private String getPlayerTeam(String player) {
-        if (!player.equals("")) {
-            for (Map.Entry<String, List<String>> entry : this.teamsConfig.value().teams.entrySet()) {
-                String key = entry.getKey();
-                List<String> list = entry.getValue();
-                if (list.contains(player.trim())) {
-                    return key;
-                }
-            }
-        }
-        return "";
     }
 }
