@@ -11,14 +11,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FootballEnricher implements GameEnricher {
-
     @Autowired
     private SQLContext sqlContext;
 
     @Override
     public Dataset<Row> enrich(JavaRDD<GameItem> rdd) {
         Dataset<Row> df = sqlContext.createDataFrame(rdd, FootballGameItem.class);
-
         return df;
     }
 }

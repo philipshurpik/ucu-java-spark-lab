@@ -1,6 +1,6 @@
 package football.validators;
 
-import football.bpp.AutowiredBroadcast;
+import football.utils.AutowiredBroadcast;
 import football.config.TeamsConfig;
 import football.models.FootballGameItem;
 import football.models.GameItem;

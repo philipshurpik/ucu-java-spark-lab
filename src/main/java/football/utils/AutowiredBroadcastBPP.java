@@ -1,4 +1,4 @@
-package football.bpp;
+package football.utils;
 
 import org.apache.spark.api.java.JavaSparkContext;
 import org.springframework.beans.BeansException;

@@ -1,6 +1,6 @@
 package football.services;
 
-import football.bpp.AutowiredBroadcast;
+import football.utils.AutowiredBroadcast;
 import football.config.ColumnsConfig;
 import org.apache.spark.broadcast.Broadcast;
 import org.springframework.stereotype.Service;
